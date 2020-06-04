@@ -251,7 +251,7 @@ ReactDOM.render(
 因为 this.props 和 this.state 可能会异步更新，所以你不要依赖他们的值来更新下一个状态。  
 3.State 的更新会被合并。当你调用 setState() 的时候，React 会把你提供的对象合并到当前的 state。这里的合并是浅合并。
 
-**更新时渲染逻辑**
+**更新时渲染逻辑**  
 ![更新渲染](./menu/src/render2.jpg)
 
 **单向数据流**  
@@ -261,12 +261,12 @@ ReactDOM.render(
 
 如果你把一个以组件构成的树想象成一个 props 的数据瀑布的话，那么每一个组件的 state 就像是在任意一点上给瀑布增加额外的水源，但是它只能向下流动。
 
-## ***生命周期***
-![生命周期V16.3前](./menu/src/生命周期1.jpg)
+## ***生命周期***  
+![生命周期V16.3前](./menu/src/生命周期1.jpg)  
 如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。长期以来，原有的生命周期函数总是会诱惑开发者在render之前的生命周期函数做一些动作，现在这些动作还放在这些函数中的话，有可能会被调用多次，这肯定不是你想要的结果。  
 原始React V16.3版本引入了新的API，
-用一个静态函数getDerivedStateFromProps来取代被deprecate的几个生命周期函数，就是强制开发者在render之前只做无副作用的操作，而且能做的操作局限在根据props和state决定新的state
-![生命周期V16.3后](./menu/src/生命周期2.jpg)
+用一个静态函数getDerivedStateFromProps来取代被deprecate的几个生命周期函数，就是强制开发者在render之前只做无副作用的操作，而且能做的操作局限在根据props和state决定新的state  
+![生命周期V16.3后](./menu/src/生命周期2.jpg)  
 ## ***事件处理***
 React 元素的事件处理和 DOM 元素的很相似，但是有一点语法上的不同：
 
